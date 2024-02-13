@@ -5,6 +5,14 @@
 * Spring Boot 3.3.2
 * AWS Lambda
 
+####  Maven Dependency for Spring Cloud Function
+```
+ <dependency>
+     <groupId>org.springframework.cloud</groupId>
+     <artifactId>spring-cloud-function-web</artifactId>
+ </dependency>
+```
+
 Below are the Functions supported in this application:
 
 * Adding a subscription
@@ -36,19 +44,38 @@ return service::getSubscriptionList; // () -> service.getSubscriptionList();
 
 ### Local Testing
 * Add subscription
+```
+curl -H "Content-Type: text/plain" localhost:8080/create -d "EmailSubscription"
+curl -H "Content-Type: text/plain" localhost:8080/create -d "MobileSubscription"
+curl -H "Content-Type: text/plain" localhost:8080/create -d "ManualSubscription"
 
-<img src="https://github.com/sakthiece08/spring-cloud-function/blob/master/src/main/resources/images/Add-subscription.png">
+```
 
 * Get a particular subscription
 
-<img src="https://github.com/sakthiece08/spring-cloud-function/blob/master/src/main/resources/images/Get-subscription.png">
-
-* List all subscriptions
-
-<img src="https://github.com/sakthiece08/spring-cloud-function/blob/master/src/main/resources/images/ListAll.png">
+```
+curl -H "Content-Type: text/plain" localhost:8080/getSubs -d "EmailSubscription"
+{"id":1,"name":"EmailSubscription"}
+```
 
 * Delete subscription
+```
+curl -H "Content-Type: text/plain" localhost:8080/clear  -d "ManualSubscription"
+```
+* List all subscriptions
 
-<img src="https://github.com/sakthiece08/spring-cloud-function/blob/master/src/main/resources/images/Delete-subscription.png">
+```
+curl -H "Content-Type: text/plain" localhost:8080/findAll                       
+[{"id":1,"name":"EmailSubscription"},{"id":2,"name":"MobileSubscription"}]%
+```
+
+## Adding AWS Adapter dependency
+
+```
+<dependency>
+     <groupId>org.springframework.cloud</groupId>
+      <artifactId>spring-cloud-function-adapter-aws</artifactId>
+ </dependency>
+```
 
 
