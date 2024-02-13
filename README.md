@@ -36,10 +36,19 @@ return service::getSubscriptionList; // () -> service.getSubscriptionList();
 
 ### Local Testing
 * Add subscription
-![img_1.png](https://github.com/sakthiece08/spring-cloud-function/blob/master/src/main/resources/images/Add-subscription.png)
+
+<img src="https://github.com/sakthiece08/spring-cloud-function/blob/master/src/main/resources/images/Add-subscription.png">
 
 * Get a particular subscription
 
+<img src="https://github.com/sakthiece08/spring-cloud-function/blob/master/src/main/resources/images/Get-subscription.png">
+
 * List all subscriptions
 
-* Delete a subscription
+<img src="https://github.com/sakthiece08/spring-cloud-function/blob/master/src/main/resources/images/ListAll.png">
+
+* Delete subscription
+
+<img src="https://github.com/sakthiece08/spring-cloud-function/blob/master/src/main/resources/images/Delete-subscription.png">
+
+
