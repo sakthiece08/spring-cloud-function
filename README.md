@@ -36,9 +36,8 @@ return service::getSubscriptionList; // () -> service.getSubscriptionList();
 
 ### Local Testing
 * Add subscription
-```
-![img_1.png](img_1.png)
-```
+![img_1.png](https://github.com/sakthiece08/spring-cloud-function/blob/master/src/main/resources/images/Add-subscription.png)
+
 * Get a particular subscription
 
 * List all subscriptions
