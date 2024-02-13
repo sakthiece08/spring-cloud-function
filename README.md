@@ -1,4 +1,4 @@
-# sb-dynamoDB
+# spring-cloud-function
 
 ### Technologies used
 * Java 17
