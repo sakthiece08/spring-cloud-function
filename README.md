@@ -78,4 +78,21 @@ curl -H "Content-Type: text/plain" localhost:8080/findAll
  </dependency>
 ```
 
+## Deploying on AWS Lambda
+Please follow the standard deployment steps as outlined [here](https://tanzu.vmware.com/developer/guides/serverless-spring/) 
 
+Important point to note is the **_Function URL_** which is used to access the Function from any client.
+
+## Testing the Function on AWS Lambda using Postman
+We need to pass the corresponding function name in the **_request header_** as shown below: 
+```
+curl --location 'https://qu3u7kpwtd2jcvoypedenjjyoi0bfcnb.lambda-url.us-east-1.on.aws/' \
+--header 'spring.cloud.function.definition: create' \
+--header 'Content-Type: text/plain' \
+--data 'sampleSubcription-A'
+```
+Please take a look at the Postman collection embedded as part of this repository.
+
+## References
+* [Spring docs - Spring Cloud Function ](https://docs.spring.io/spring-cloud-function/docs/current/reference/html/aws.html#_getting_started)
+* [VMware developer guide](https://tanzu.vmware.com/developer/guides/serverless-spring/)
