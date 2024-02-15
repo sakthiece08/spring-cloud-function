@@ -1,0 +1,224 @@
+{
+	"info": {
+		"_postman_id": "98432feb-6dd3-423f-be27-0988b5228ada",
+		"name": "Serverless",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "2931585"
+	},
+	"item": [
+		{
+			"name": "create subs",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "sample",
+					"options": {
+						"raw": {
+							"language": "text"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:8080/create",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"create"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "create subs on AWS Lambda",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "spring.cloud.function.definition",
+						"value": "create",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "sampleSubcription-A",
+					"options": {
+						"raw": {
+							"language": "text"
+						}
+					}
+				},
+				"url": {
+					"raw": "https://qu3u7kpwtd2jcvoypedenjjyoi0bfcnb.lambda-url.us-east-1.on.aws/",
+					"protocol": "https",
+					"host": [
+						"qu3u7kpwtd2jcvoypedenjjyoi0bfcnb",
+						"lambda-url",
+						"us-east-1",
+						"on",
+						"aws"
+					],
+					"path": [
+						""
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "subs details",
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"method": "GET",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "sample",
+					"options": {
+						"raw": {
+							"language": "text"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:8080/get",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"get"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "subs details on AWS Lambda",
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "spring.cloud.function.definition",
+						"value": "getSubs",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "sampleSubcription-A",
+					"options": {
+						"raw": {
+							"language": "text"
+						}
+					}
+				},
+				"url": {
+					"raw": "https://qu3u7kpwtd2jcvoypedenjjyoi0bfcnb.lambda-url.us-east-1.on.aws/",
+					"protocol": "https",
+					"host": [
+						"qu3u7kpwtd2jcvoypedenjjyoi0bfcnb",
+						"lambda-url",
+						"us-east-1",
+						"on",
+						"aws"
+					],
+					"path": [
+						""
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "list subs",
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"method": "GET",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "sample\n",
+					"options": {
+						"raw": {
+							"language": "text"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:8080/list",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"list"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "list subs on AWS Lambda",
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "spring.cloud.function.definition",
+						"value": "findAll",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "\n",
+					"options": {
+						"raw": {
+							"language": "text"
+						}
+					}
+				},
+				"url": {
+					"raw": "https://qu3u7kpwtd2jcvoypedenjjyoi0bfcnb.lambda-url.us-east-1.on.aws/",
+					"protocol": "https",
+					"host": [
+						"qu3u7kpwtd2jcvoypedenjjyoi0bfcnb",
+						"lambda-url",
+						"us-east-1",
+						"on",
+						"aws"
+					],
+					"path": [
+						""
+					],
+					"query": [
+						{
+							"key": "",
+							"value": "",
+							"disabled": true
+						}
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}
