@@ -21,10 +21,10 @@ Below are the Functions supported in this application:
 * Delete a subscription
 
 ```
-@Bean
-public Supplier<List<Subscription>> findAll() {
-return service::getSubscriptionList; // () -> service.getSubscriptionList();
-}
+    @Bean
+    public Supplier<List<Subscription>> findAll() {
+    return service::getSubscriptionList; // () -> service.getSubscriptionList();
+    }
 
     @Bean
     public Consumer<String> create() {
