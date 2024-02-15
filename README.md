@@ -81,6 +81,16 @@ curl -H "Content-Type: text/plain" localhost:8080/findAll
 ## Deploying on AWS Lambda
 Please follow the standard deployment steps as outlined [here](https://tanzu.vmware.com/developer/guides/serverless-spring/) 
 
+Define the below handler in Lambda runtime settings:
+```
+org.springframework.cloud.function.adapter.aws.FunctionInvoker::handleRequest
+```
+**SnapStart:**
+
+Lambda SnapStart for Java can improve startup performance for latency-sensitive applications by up to 10x at no extra cost,
+typically with no changes to your function code. This addresses the **_cold start_** issue in Lambda Function.
+https://docs.aws.amazon.com/lambda/latest/dg/snapstart.html?icmpid=docs_lambda_help
+
 Important point to note is the **_Function URL_** which is used to access the Function from any client.
 
 ## Testing the Function on AWS Lambda using Postman
