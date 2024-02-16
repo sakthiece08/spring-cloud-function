@@ -12,6 +12,13 @@
      <artifactId>spring-cloud-function-web</artifactId>
  </dependency>
 ```
+**Adapter to deploy in AWS Lambda, we can change this adapter for various cloud providers**
+```
+ <dependency>
+     <groupId>org.springframework.cloud</groupId>
+     <artifactId>spring-cloud-function-adapter-aws</artifactId>
+ </dependency>
+```
 
 Below are the Functions supported in this application:
 
