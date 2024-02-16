@@ -81,7 +81,7 @@ curl -H "Content-Type: text/plain" localhost:8080/findAll
 [{"id":1,"name":"EmailSubscription"},{"id":2,"name":"MobileSubscription"}]%
 ```
 
-## Adding AWS Adapter dependency
+### Adding AWS Adapter dependency
 
 ```
 <dependency>
@@ -90,14 +90,14 @@ curl -H "Content-Type: text/plain" localhost:8080/findAll
  </dependency>
 ```
 
-## Deploying on AWS Lambda
+### Deploying on AWS Lambda
 Please follow the standard deployment steps as outlined [here](https://tanzu.vmware.com/developer/guides/serverless-spring/) 
 
 Define the below handler in Lambda runtime settings:
 ```
 org.springframework.cloud.function.adapter.aws.FunctionInvoker::handleRequest
 ```
-**SnapStart:**
+#### **SnapStart:**
 
 Lambda SnapStart for Java can improve startup performance for latency-sensitive applications by up to 10x at no extra cost,
 typically with no changes to your function code. This addresses the **_cold start_** issue in Lambda Function.
@@ -105,7 +105,7 @@ https://docs.aws.amazon.com/lambda/latest/dg/snapstart.html?icmpid=docs_lambda_h
 
 Important point to note is the **_Function URL_** which is used to access the Function from any client.
 
-## Testing the Function natively on AWS
+### Testing the Function natively on AWS
 Since our application has more than 1 function, we need to explicitly pass the function name which we are trying to invoke.
 We can do so by using environment variables under Configuration section in AWS Lambda function.
 ```
@@ -114,7 +114,7 @@ value: {function_name}
 ```
 
 
-## Testing the Function running on AWS Lambda using Postman
+### Testing the Function running on AWS Lambda using Postman
 We need to pass the corresponding function name in the **_request header_** as shown below: 
 ```
 curl --location 'https://qu3u7kpwtd2jcvoypedenjjyoi0bfcnb.lambda-url.us-east-1.on.aws/' \
@@ -124,6 +124,6 @@ curl --location 'https://qu3u7kpwtd2jcvoypedenjjyoi0bfcnb.lambda-url.us-east-1.o
 ```
 Please take a look at the Postman collection embedded as part of this repository.
 
-## References
+### References
 * [Spring docs - Spring Cloud Function ](https://docs.spring.io/spring-cloud-function/docs/current/reference/html/aws.html#_getting_started)
 * [VMware developer guide](https://tanzu.vmware.com/developer/guides/serverless-spring/)
