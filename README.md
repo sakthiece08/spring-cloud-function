@@ -12,13 +12,6 @@
      <artifactId>spring-cloud-function-web</artifactId>
  </dependency>
 ```
-**Adapter to deploy in AWS Lambda, we can change this adapter for various cloud providers**
-```
- <dependency>
-     <groupId>org.springframework.cloud</groupId>
-     <artifactId>spring-cloud-function-adapter-aws</artifactId>
- </dependency>
-```
 
 Below are the Functions supported in this application:
 
@@ -81,7 +74,7 @@ curl -H "Content-Type: text/plain" localhost:8080/findAll
 [{"id":1,"name":"EmailSubscription"},{"id":2,"name":"MobileSubscription"}]%
 ```
 
-### Adding AWS Adapter dependency
+### Adding AWS Adapter dependency, we can change this adapter for various cloud providers
 
 ```
 <dependency>
