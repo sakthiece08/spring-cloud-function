@@ -48,6 +48,11 @@ Below are the Functions supported in this application:
         return service::deleteSubscription; // name -> service.deleteSubscription(name)
     }
  ``` 
+### Build
+Run this Maven command to generate artifacts:
+```
+ mvn compile package
+```
 
 ### Local Testing
 * Add subscription
@@ -100,7 +105,16 @@ https://docs.aws.amazon.com/lambda/latest/dg/snapstart.html?icmpid=docs_lambda_h
 
 Important point to note is the **_Function URL_** which is used to access the Function from any client.
 
-## Testing the Function on AWS Lambda using Postman
+## Testing the Function natively on AWS
+Since our application has more than 1 function, we need to explicitly pass the function name which we are trying to invoke.
+We can do so by using environment variables under Configuration section in AWS Lambda function.
+```
+Key: SPRING_CLOUD_FUNCTION_DEFINITION
+value: {function_name}
+```
+
+
+## Testing the Function running on AWS Lambda using Postman
 We need to pass the corresponding function name in the **_request header_** as shown below: 
 ```
 curl --location 'https://qu3u7kpwtd2jcvoypedenjjyoi0bfcnb.lambda-url.us-east-1.on.aws/' \
